@@ -43,9 +43,9 @@ if [ "$answer" == "y" ]; then
 	fi
 
 	echo -e "\nCreating the directory ($wiki)"
-	#mkdir -p "$wiki"
-	cp -av $template $wiki
+	cp -a "$template" "$wiki"
 
+	# mkdir -p "$wiki"
 	# ln -s $template/* $wiki/
 	# rm "$wiki/LocalSettings.php"
 	# cp -a "$template/LocalSettings.php" "$wiki/LocalSettings.php"
