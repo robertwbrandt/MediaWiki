@@ -44,18 +44,20 @@ if [ "$answer" == "y" ]; then
 
 	echo -e "\nCreating the directory ($wiki)"
 	mkdir -p "$wiki"
-	ln -s $template/* $wiki/
-	rm "$wiki/LocalSettings.php"
-	cp -a "$template/LocalSettings.php" "$wiki/LocalSettings.php"
-	rm "$wiki/images"
-	cp -a "$template/images" "$wiki/images"
+	cp -av $template $wiki
 
-	rm "$wiki/includes"
-	mkdir -p "$wiki/includes"
-	ln -s $template/includes/* $wiki/includes/
-	rm "$wiki/includes/config"
-	cp -a "$template/includes/config" "$wiki/includes/config"
-	# cp -a "$template/includes" "$wiki/includes"
+	# ln -s $template/* $wiki/
+	# rm "$wiki/LocalSettings.php"
+	# cp -a "$template/LocalSettings.php" "$wiki/LocalSettings.php"
+	# rm "$wiki/images"
+	# cp -a "$template/images" "$wiki/images"
+
+	# rm "$wiki/includes"
+	# mkdir -p "$wiki/includes"
+	# ln -s $template/includes/* $wiki/includes/
+	# rm "$wiki/includes/config"
+	# cp -a "$template/includes/config" "$wiki/includes/config"
+	# # cp -a "$template/includes" "$wiki/includes"
 
 	echo -e "\nModifying $wiki/LocalSettings.php file"
 	sed -i "s|\$wgScriptPath\s*=\s*\".*\";.*|\$wgScriptPath = \"/$shortname\";|" "$wiki/LocalSettings.php"
