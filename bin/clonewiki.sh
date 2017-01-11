@@ -19,7 +19,7 @@ echo -e "\nAbout to create a wiki with the following attributes:"
 echo -e "        Title: $title"
 echo -e "Database Name: $shortname"
 echo -e "Document Root: $DocumentRoot/$shortname\n"
-read -p 'Do you with to continue? (Y/N) ' answer
+read -p 'Do you wish to continue? (Y/N) ' answer
 answer=$( echo ${answer::1} | tr '[:upper:]' '[:lower:]' )
 
 if [ "$answer" == "y" ]; then

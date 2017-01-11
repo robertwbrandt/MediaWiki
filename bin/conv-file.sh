@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # https://www.mediawiki.org/wiki/Convert_Socialtextwiki_to_Mediawiki#Copy_the_original_files_to_the_new_host
 
 find plugin -path 'plugin/zsi*/attachments/*.txt' | sort |
