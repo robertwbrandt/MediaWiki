@@ -104,3 +104,6 @@ if __name__ == "__main__":
 
   args['socialtext'] = os.path.join( args['socialtext'], "plugin", args['wikiname'] )
   print "Verify that the SocialText wiki is present. %s" % args['socialtext']
+
+
+
